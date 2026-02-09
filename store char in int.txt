@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main(){
+    char a='A';
+    int num=a;
+    printf("%d",num);
+    return 0;
+}
