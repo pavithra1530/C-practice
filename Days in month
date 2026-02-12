@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int Month;
+    scanf("%d",&Month);
+    if (Month == 2) {
+        printf("28 or 29 days");
+    }
+    else {
+        printf("Not February");
+    }
+}
