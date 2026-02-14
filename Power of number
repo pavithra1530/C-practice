@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int n,m,o=1;
+    scanf("%d %d",&n,&m);
+    for (i=1; i<=m; i++) {
+        o = o*n;
+    }
+    printf("%d", o);
+    return 0;
+}
