@@ -1,0 +1,22 @@
+#include <math.h>
+int main() {
+    int N, original, digit, digits = 0;
+    int sum = 0;
+printf("Enter a number: ");
+    scanf("%d", &N);
+
+    original = N;
+    for (int temp = N; temp > 0; temp = temp / 10) {
+        digits++;
+    }
+    for (; N > 0; N = N / 10) {
+        digit = N % 10;
+        sum = sum + pow(digit, digits);
+    }
+if (sum == original)
+        printf("Yes");
+    else
+        printf("No");
+
+    return 0;
+}
