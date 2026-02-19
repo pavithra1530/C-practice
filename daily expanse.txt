@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int N, expense;
+    int total = 0, overspendDays = 0;
+
+    printf("Enter number of days: ");
+    scanf("%d", &N);
+
+    printf("Enter daily expenses:\n");
+    for (int i = 1; i <= N; i++) {
+        scanf("%d", &expense);
+        total += expense;
+
+        if (expense > 1000) {
+            overspendDays++;
+        }
+    }
+
+    printf("Total Expense: %d\n", total);
+    printf("Overspend Days: %d", overspendDays);
+
+    return 0;
+}
