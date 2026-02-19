@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int salary, absentDays;
+   printf("Enter salary: ");
+    scanf("%d", &salary);
+     printf("Enter number of absent days: ");
+    scanf("%d", &absentDays);
+    for (int i = 1; i <= absentDays; i++) {
+        salary = salary - 100;
+    }
+    printf("Final Salary: ₹%d", salary);
+return 0;
+}
