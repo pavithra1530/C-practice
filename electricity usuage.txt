@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int N, units;
+    int total = 0;
+    printf("Enter number of days: ");
+    scanf("%d", &N);
+    printf("Enter daily electricity usage:\n");
+    for (int i = 1; i <= N; i++) {
+        scanf("%d", &units);
+        total += units;
+    } printf("Total Units: %d", total);
+
+    return 0;
+}
