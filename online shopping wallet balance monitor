@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int balance, N, i = 1, amt, success = 0;
+    scanf("%d%d", &balance, &N);
+    while (i <= N) {
+        scanf("%d", &amt);
+
+        if (amt > balance)
+            break;
+        balance -= amt;
+        success++;
+        i++;
+    }
+    printf("Successful Purchases: %d\n", success);
+    printf("Final Balance: %d", balance);
+    return 0;
+}
