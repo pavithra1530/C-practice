@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int cash, N, i = 1, w, success = 0;
+    scanf("%d%d", &cash, &N);
+    while (i <= N) {
+        scanf("%d", &w);
+        if (w > cash)
+            break;
+        cash -= w;
+        success++;
+        i++;
+    }
+    printf("Successful Withdrawals: %d\n", success);
+    printf("Remaining Cash: %d", cash);
+    return 0;
+}
