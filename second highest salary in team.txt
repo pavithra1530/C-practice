@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter the number of employees: ");
+    scanf("%d", &n);
+    if (n <2) {
+        printf("No second highest salary found.\n");
+        return 0;
+    }
+    int salary[n];
+    int largest=-1, second = -1;
+    printf("Enter salaries:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &salary[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        if (salary[i] > largest) {
+            second = largest;
+            largest = salary[i];
+        }
+        else if (salary[i] > second && salary[i] != largest ){
+            second= salary[i];
+        }
+    }
+    if (second ==-1) {
+       printf("No second highest salary found.\n");
+    } else {
+       printf ("Second highest salary is %d\n", second);
+    }
+    return 0;
+}
