@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);
+    int a[R][C];
+    int count = 0;
+    for(int i = 0; i < R; i++) {
+        for(int j = 0; j < C; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for(int i = 0; i < R; i++) {
+        for(int j = 0; j < C; j++) {
+            int isMinRow = 1, isMaxCol = 1;
+            for(int k = 0; k < C; k++) {
+                if(a[i][k] < a[i][j]) {
+                    isMinRow = 0;
+                    break;
+                }
+            }
+            for(int k = 0; k < R; k++) {
+                if(a[k][j] > a[i][j]) {
+                    isMaxCol = 0;
+                    break;
+                }
+            }
+            if(isMinRow && isMaxCol)
+                count++;
+        }
+    }
+        printf("%d", count);
+    return 0;
+}
+
