@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int countDigits(int n) {
+    int count = 0;
+    while(n > 0) {
+        count++;
+        n /= 10;
+    }
+    return count;
+}
+int isArmstrong(int n) {
+    int original = n;
+    int digits = countDigits(n);
+    int sum = 0, rem;
+    while(n > 0) {
+        rem = n % 10;
+        sum += pow(rem, digits);
+        n /= 10;
+    }
+    return sum == original;
+}
+int main() {
+    int n;
+    scanf("%d", &n);
+    if(isArmstrong(n))
+        printf("Armstrong");
+    else
+        printf("Not Armstrong");
+    return 0;
+}
